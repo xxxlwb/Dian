@@ -17,7 +17,7 @@ Dian的学长，你们好呀，我是电信2311班的路文博，在大一上学
 * 4 用谷歌邮箱登陆GitHub，并创建自己的库，在此过程中了解到手机上也可直接用github软件，但国行版iPhone不能在AppStore上下载Github，只需购买外国Apple Id （davidchavezvct@hotmail.com ）在Applestore中切换id 即可搜索到国外软件如github ，X等。并使用shadowrocket连接vpn，然后我发现上述clash连接地址依然可以使用并且不用花任何费用！但手机上我没找到如何创建github库，只能搜索别人的远程链接并阅读。
   # DAY 3—5
   这几天课程较满，有实验课等，此段花费天数较多
-  # 下载Visual Studio Code 配置ESP IDF开发环境
+  # 下载Visual Studio Code 配置ESP IDF开发环境 点灯
   * 1 配置vscode中文环境：进入vscode界面 在左侧栏搜索Chinese，点击install，然后重启vscode，即可显示中文
   * 2 下载ESP IDF组件，静待漫长的安装后，尝试点亮led灯来检查环境是否配置正确
   * 3 学习GPIO和Esp32s3的参数配置及主要组件（按自己学习的理解来编写的）
@@ -30,7 +30,7 @@ Dian的学长，你们好呀，我是电信2311班的路文博，在大一上学
 |RGB LED| 发光二极管，由 GPIO38 驱动|
 |PWR|开发板接电源后该红灯就会亮|
 
-  * 4 学习点亮led灯的代码
+  * 4 学习点亮led灯的代码（这一块耗费时间较长，主要是学习c语言代码）
 ```c
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"//包含 FreeRTOS 实时操作系统的头文件
