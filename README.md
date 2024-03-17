@@ -31,7 +31,8 @@ Dian的学长，你们好呀，我是电信2311班的路文博，在大一上学
 |PWR|开发板接电源后该红灯就会亮|
 
   * 4 学习点亮led灯的代码
-    ```c
+```c
+#include <stdio.h>
 #include "freertos/FreeRTOS.h"//包含 FreeRTOS 实时操作系统的头文件
 #include "freertos/task.h"//包含 FreeRTOS 任务相关的头文件
 #include "esp_system.h"//包含 ESP 系统相关的头文件
