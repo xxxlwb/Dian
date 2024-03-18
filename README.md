@@ -20,17 +20,14 @@ Dian的学长，你们好呀，我是电信2311班的路文博，在大一上学
   # 下载Visual Studio Code 配置ESP IDF开发环境 点灯
   * 1 配置vscode中文环境：进入vscode界面 在左侧栏搜索Chinese，点击install，然后重启vscode，即可显示中文
   * 2 下载ESP IDF组件，静待漫长的安装后，尝试点亮led灯来检查环境是否配置正确
-  * 3 学习GPIO和Esp32s3的参数配置及主要组件（按自己学习的理解来编写的）
-|名称|功能|
-|:---|---:|
-|3v3|3.3v电源|
-|USB|开发板供电，可烧录固件至芯片，也可作为通信接口|
-|Boot Button（Boot 键）|按住 Boot 的同时按一下 Reset 进入“固件下载”（学的网上教程）|
-|Reset Button（Reset 键）|复位按键|
-|RGB LED| 发光二极管，由 GPIO38 驱动|
-|PWR|开发板接电源后该红灯就会亮|
-
-  * 4 学习点亮led灯的代码（这一块耗费时间较长，主要是学习c语言代码）
+  * 3 学习GPIO和Esp32s3的参数配置及主要组件
+  * 4 学习点亮led灯的代码,检查开发环境是否配置成功（这一块耗费时间较长，主要是学习c语言代码）
+  * 此处我碰到了许多的问题，烧录的时候总是报错，首先是A fatal error occurred: Invalid head of packet (0xXX):
+    Possible serial noise or corruption.经过搜索得知可能是数据线的问题，换一根USB之后，还是报错，但错误
+    不再是原来的那样，最后发现换数据线之后com口也要手动更变。经过一系列报错以及漫长的烧录等待，led灯总算
+    亮了起来，不过我目前还有一个问题，就是led灯闪烁的周期与代码预期的要更长，我搜索过很多类似问题，都没有
+    明确的答复最后猜测可能是硬件问题，导致数据传输时有所延迟吧。
+   * 点亮LED代码  
 ```c
 #include <stdio.h>
 #include "freertos/FreeRTOS.h"//包含 FreeRTOS 实时操作系统的头文件
