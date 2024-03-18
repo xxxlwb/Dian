@@ -37,7 +37,7 @@ github是干什么的，创建了自己的仓库。下面介绍我学习科学�
 #include "esp_system.h"//包含 ESP 系统相关的头文件
 #include "driver/gpio.h"//包含 GPIO 驱动程序的头文件
 
-#define LED_GPIO 4//定义LED灯所连接的 GPIO 引脚号为 4
+#define LED_GPIO 4//定义LED灯所连接的 GPIO 引脚号为 4（可根据需求随机定义通用引脚）
 
 void app_main()//程序的入口函数，类似于 Arduino 中的 setup() 函数
 {
