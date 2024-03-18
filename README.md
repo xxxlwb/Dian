@@ -52,5 +52,7 @@ void app_main()//程序的入口函数，类似于 Arduino 中的 setup() 函数
         vTaskDelay(1000);//再次延迟
     }
 }
-    
-  
+```
+# DAY 5
+# 学习串口协议，向电脑发送Hello world
+串口通信：使用发送线和接收线 用于两台设备之间进行通讯比较方便
