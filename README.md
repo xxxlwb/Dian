@@ -92,7 +92,7 @@ void uart_task(void *pvParameters) { // 创建UART通信任务函数
     uart_driver_install(uart_num, TX_BUF_SIZE, 0, 0, NULL, 0); // 安装 UART 驱动程序
     while (1) { // 循环
         uart_write_bytes(uart_num, "Hello World!\n", strlen("Hello World!\n")); // 发送 "Hello World!\n" 消息
-        vTaskDelay(pdMS_TO_TICKS(1000)); // 延迟 1000 毫秒
+        vTaskDelay(pdMS_TO_TICKS(1000)); // 延迟 1000 毫秒，pdMS_TO_TICKS(1000) 将 1000 毫秒转换为时钟节拍数
     }
 }
 
@@ -113,7 +113,7 @@ IIC协议（Inter-Integrated Circuit）（主从模式），不同于串口通�
 * 读取数据与之类似，只是在读取寄存器地址后多读一遍设备地址 下面是示意图片（上方为读数据，下面为写数据）
  ![](https://github.com/xxxlwb/Dian/blob/main/Dian/%E8%AF%BB%E5%86%99%E6%95%B0%E6%8D%AE.jpg)
 ```c
-//此部分代码并没有学到，我并未成功读取mpu6050的数据，还请学长见谅呀！
+//此部分代码并没有学完，我并未成功读取mpu6050的数据，还请学长见谅呀！
 ```
 # DAY 7
   # 学会运用Markdown，写此份文档（全文手工敲打）
