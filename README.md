@@ -84,14 +84,12 @@ void uart_task(void *pvParameters) { // 创建UART通信任务函数
     uart_config_t uart_config = { // UART 配置信息结构体
         .baud_rate = 115200, // 设置波特率为 115200
         .data_bits = UART_DATA_8_BITS, // 数据位数为 8 位
-        .parity = UART_PARITY_DISABLE, // 禁用校验位
+        .parity = UART_PARITY_DISABLE, // 禁用校验位，通常可不写
         .stop_bits = UART_STOP_BITS_1, // 停止位数为 1
-        .flow_ctrl = UART_HW_FLOWCTRL_DISABLE // 禁用硬件流控
+        .flow_ctrl = UART_HW_FLOWCTRL_DISABLE // 禁用硬件流控，简化连接
     };
     uart_param_config(uart_num, &uart_config); // 配置 UART 参数
-    uart_set_pin(uart_num, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE); // 设置 UART 引脚
     uart_driver_install(uart_num, TX_BUF_SIZE, 0, 0, NULL, 0); // 安装 UART 驱动程序
-
     while (1) { // 循环
         uart_write_bytes(uart_num, "Hello World!\n", strlen("Hello World!\n")); // 发送 "Hello World!\n" 消息
         vTaskDelay(pdMS_TO_TICKS(1000)); // 延迟 1000 毫秒
