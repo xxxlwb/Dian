@@ -34,7 +34,7 @@ Github是干什么的，创建了自己的仓库。下面介绍我学习科学�
 #include <stdio.h> //c语言中包含标准输入输出库的头文件
 #include "freertos/FreeRTOS.h"//包含 FreeRTOS 实时操作系统的头文件
 #include "freertos/task.h"//包含 FreeRTOS 任务处理的头文件
-#include "esp_system.h"//包含 ESP 系统相关的头文件
+#include "esp_system.h"//包含 ESP 系统相关的头文件，没有用到？
 #include "driver/gpio.h"//包含 GPIO 驱动程序的头文件
 
 #define LED_GPIO 4//定义LED灯所连接的 GPIO 引脚号为 4（可根据需求随机定义通用引脚）
