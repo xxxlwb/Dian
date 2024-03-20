@@ -25,7 +25,7 @@ Github是干什么的，创建了自己的仓库。下面介绍我学习科学�
   * 3 学习GPIO和Esp32s3的参数配置及主要组件
   * 4 学习点亮led灯的代码,检查开发环境是否配置成功（这一块耗费时间较长，主要是学习c语言代码）
   * 此处我碰到了许多的问题（这个地方是最耗时间的，因为有的问题很蹊跷）烧录的时候总是报错，首先是A fatal
-  * error occurred: Invalid head of packet (0xXX):Possible serial noise or corruption.经过搜索得知可能
+    error occurred: Invalid head of packet (0xXX):Possible serial noise or corruption.经过搜索得知可能
     是数据线的问题，换一根USB之后，还是报错，但错误不再是原来的那样，最后发现换数据线之后com口也要手动更变。
     经过一系列报错以及漫长的烧录等待，led灯总算亮了起来，不过我目前还有一个问题，就是led灯闪烁的周期与代码
     预期的要更长，我搜索过很多类似问题，都没有明确的答复。最后猜测可能是硬件问题，导致数据传输时有所延迟吧。
